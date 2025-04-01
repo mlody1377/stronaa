@@ -1,35 +1,89 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div class="profile-container">
+        <div class="profile-header">
+          <img src="assets/sigma.png" alt="Profile Picture" />
+          <h2>Mlody</h2>
+          <div class="tags">
+            <div class="tag">
+              <a
+                href="https://steamcommunity.com/id/Superwow134/"
+                target="_blank"
+              >
+                <img
+                  src="assets/Steam.png"
+                  alt="Steam obrazek"
+                  class="obrazek"
+                />
+                Steam
+                <img
+                  src="assets/arrow.png"
+                  alt="arrow obrazek"
+                  class="obrazek"
+                />
+              </a>
+            </div>
+            <div class="tag">
+              <a href="https://wakatime.com/@mlodysigma" target="_blank">
+                <img
+                  src="assets/wakatime.svg"
+                  alt="wakatime obrazek"
+                  class="obrazek"
+                />{" "}
+                WakaTime
+                <img
+                  src="assets/arrow.png"
+                  alt="arrow obrazek"
+                  class="obrazek"
+                />
+              </a>
+            </div>
+            <div class="tag">
+              <a href="https://github.com/karolturecki" target="_blank">
+                <img
+                  src="assets/github.png"
+                  alt="github obrazek"
+                  class="obrazek"
+                />{" "}
+                GitHub
+                <img
+                  src="assets/arrow.png"
+                  alt="arrow obrazek"
+                  class="obrazek"
+                />{" "}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div></div>
+        <div id="about-me" class="about-me">
+          <a class="a" href="stronka.github.io/about" target="_blank">
+            About me{" "}
+            <img src="assets/arrow.png" alt="arrow obrazek" class="strzalka" />
+          </a>
+        </div>
+        <div class="now-playing">
+          <img
+            id="album-art"
+            class="album-art"
+            src=""
+            alt="Album Art"
+            style="display: none;"
+          />
+          <span>Currently Playing:</span>
+          <span id="current-track">Loading...</span>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <script src="script.js"></script>
     </>
-  )
+  );
 }
-
-export default App
+export default App;
